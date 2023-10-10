@@ -1,5 +1,9 @@
 #include<iostream>
 
+#include<fstream>
+
+#include<iomanip>
+
 using namespace std;
 
 //using std::cout; 
@@ -61,15 +65,48 @@ int main()
     ////    cout << "HIGH speed";
     ////}
 
-    int score = 85;
+    //int score = 85;
 
     //cout << (80 <= score) << endl; //80 <= -185 -> FALSE (0)
 
-    if (80 <= score && score <= 89)
-    {
-        cout << "Letter grade is B." << endl;
-    }
+    //if (80 <= score && score <= 89)
+    //{
+    //    cout << "Letter grade is B." << endl;
+    //}
 
+
+    ////7.0/7.0 = 1.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+    //double sum = 2.0 / 7.0 + 3.0 / 7.0 + 2.0 / 7.0;
+
+    ////float floatSum = 2.0 / 7.0 + 3.0 / 7.0 + 2.0 / 7.0;
+
+    ////cout << fixed << setprecision(17); //displays TEN digits after the decimal
+    ////cout << sum << endl;
+    ////cout << "FLOAT sum - less precise?: " << floatSum << endl; 
+
+    //double tolerance = 0.000000000000000001; //TIGHT spec! 
+
+    //if (abs(sum - 1.0) <= tolerance)
+    //{
+    //    cout << "Equal to 1 - WITHIN a tolerance!" << endl;
+    //}
+
+    //else
+    //{
+    //    cout << "NOT equal to 1 within tolerance = " << tolerance <<  endl; 
+    //}
+
+    ifstream inputData; //#include <fstream>
+    inputData.open("input1File.txt");
+    
+    if (!inputData)
+    {
+        cout << "ERROR! File not found" << endl;
+        return 1; //"early return!"
+
+        // return prevents program from going further
+        // returning nonzero value is convention for abnormal termination
+    }
 
 
     return 0;
